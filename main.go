@@ -28,7 +28,7 @@ func main() {
 				Post(url)
 
 			failOnError(err, "Error doing POST")
-			fmt.Println("Result: ", repo, resp)
+			fmt.Println("Resp: ", resp, "for: ", repo)
 		}(repo)
 
 	}
@@ -38,6 +38,6 @@ func main() {
 
 func failOnError(err error, msg string) {
 	if err != nil {
-		log.Panicf("%s: %s", msg, err)
+		log.Panicf("%s: %s, %s", msg, err, err.Error())
 	}
 }
