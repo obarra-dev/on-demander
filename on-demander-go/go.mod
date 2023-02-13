@@ -1,4 +1,4 @@
-module on-demander
+module on-demander-go
 
 go 1.19
 
